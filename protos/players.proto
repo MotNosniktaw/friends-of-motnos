@@ -1,0 +1,16 @@
+syntax = "proto3";
+option go_package="./protos";
+
+service Player {
+    rpc Get(GetPlayerRequest) returns (GetPlayerResponse);
+}
+
+message GetPlayerRequest {
+    string Id = 1;
+}
+
+message GetPlayerResponse {
+    string Id = 1;
+    string Name = 2;
+    string TeamId = 3;
+}

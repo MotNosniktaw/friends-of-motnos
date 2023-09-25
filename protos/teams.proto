@@ -6,11 +6,10 @@ service Team {
 }
 
 message GetTeamRequest {
-    string id = 1;
+    string Id = 1;
 }
 
 message GetTeamResponse {
-    string id = 1;
-    string ownerId = 2;
-
+    string Id = 1;
+    string OwnerId = 2;
 }

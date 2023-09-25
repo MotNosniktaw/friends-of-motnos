@@ -1,0 +1,6 @@
+services:
+  db:
+    image: postgis/postgis:latest
+    environment:
+      - POSTGRES_DB=fom
+
