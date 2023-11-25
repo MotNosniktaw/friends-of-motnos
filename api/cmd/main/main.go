@@ -16,7 +16,7 @@ func main() {
 	players := r.Group("/players")
 	players.GET("/", func(ctx *gin.Context) {
 		var players []models.Player
-		db.DB.Find(&players)
+		db.DB.Preload("nf;_teams").Find(&players)
 
 		ctx.JSON(http.StatusOK, players)
 	})

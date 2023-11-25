@@ -1,7 +1,8 @@
 package db
 
 import (
-	"github.com/motnosniktaw/nflfantasy/pkg/models"
+	"fmt"
+
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 )
@@ -15,7 +16,7 @@ func Connect() {
 		panic("Could not connect to database")
 	}
 
-	DB = db
+	fmt.Println("Connected to database")
 
-	DB.AutoMigrate(&models.Player{})
+	DB = db
 }
