@@ -3,4 +3,10 @@ services:
     image: postgis/postgis:latest
     environment:
       - POSTGRES_DB=fom
+    volumes:
+      - fom-db:/app
+
+volumes:
+  fom-db:
+
 
